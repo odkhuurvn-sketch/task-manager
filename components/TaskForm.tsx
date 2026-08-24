@@ -1,15 +1,47 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
-export function TaskForm() {
+import type { Task } from "@/types/task";
+
+type TaskFormProps = {
+  onAddTask: (task: Task) => void;
+};
+
+export function TaskForm({ onAddTask }: TaskFormProps) {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [priority, setPriority] = useState<"low" | "medium" | "high">("low");
   const [dueDate, setDueDate] = useState("");
   const [error, setError] = useState("");
 
+  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+
+    if (!title.trim()) {
+      setError("Task title is required.");
+      return;
+    }
+
+    onAddTask({
+      id: crypto.randomUUID(),
+      title: title.trim(),
+      description: description.trim(),
+      priority,
+      dueDate,
+      completed: false,
+      createdAt: new Date().toISOString(),
+    });
+
+    setTitle("");
+    setDescription("");
+    setPriority("low");
+    setDueDate("");
+    setError("");
+  }
+
   return (
-    <form className="space-y-4 mb-6">
+    <form onSubmit={handleSubmit} className="space-y-4 mb-6">
+        {error && <p className="text-red-600 text-sm">{error}</p>}
         <label htmlFor="title" className="text-slate-900">Title</label>
 <input
   id="title"
