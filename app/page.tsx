@@ -39,30 +39,11 @@ export default function Home() {
     setTasks((current) => [task, ...current]);
   }
 
-  function addSampleTask() {
-  const task: Task = {
-    id: crypto.randomUUID(),
-    title: "New sample task",
-    description: "Created from React state",
-    priority: "medium",
-    dueDate: "",
-    completed: false,
-    createdAt: new Date().toISOString(),
-  };
-  setTasks((current) => [task, ...current]);
-}      
-
   return (
     <main className="min-h-screen bg-slate-200 p-6">
       <div className="mx-auto max-w-3xl">
         <Header title="Student Task Manager" subtitle="Manage your daily tasks and assignments." />
       <TaskForm onAddTask={addTask} />
-      <button
-  onClick={addSampleTask}
-  className="mb-6 bg-white rounded-md text-slate-900 border border-slate-300 px-4 py-2 text-sm"
->
-  Add Sample Task
-</button>
       <TaskStats />
       <TaskList  tasks={tasks} />
       </div>
