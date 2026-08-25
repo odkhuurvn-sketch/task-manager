@@ -3,9 +3,11 @@ import type { Task } from "@/types/task";
 
 type TaskListProps = {
   tasks: Task[];
+  onToggle: (id: string) => void;
+  onDelete: (id: string) => void;
 };
 
-export function TaskList({ tasks }: TaskListProps) {
+export function TaskList({ tasks, onToggle, onDelete }: TaskListProps) {
   return (
     <section className="space-y-3">
       <h2 className="text-lg font-semibold text-slate-900">Tasks</h2>
@@ -13,10 +15,9 @@ export function TaskList({ tasks }: TaskListProps) {
       {tasks.map((task) => (
         <TaskItem
           key={task.id}
-          title={task.title}
-          description={task.description}
-          priority={task.priority}
-          dueDate={task.dueDate}
+          task={task}
+          onToggle={onToggle}
+          onDelete={onDelete}
         />
       ))}
     </section>
