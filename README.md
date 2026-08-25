@@ -86,8 +86,8 @@ student-task-manager/
 ## Screenshot-ууд
 
 ```markdown
-![Main view](https://1drv.ms/i/c/644d3864491f861f/IQBQW7lHNy1gRrsUPJp9KxsYAa0BOVMSnGvdfIzzWjE-p_I?e=OC8ByS)
-![Mobile view](https://1drv.ms/i/c/644d3864491f861f/IQDE7yBHKUkRQLszltMw8HOuAev0TTaPzaz9vkBKmtu-3MI?e=mk3eHX)
+![Main view](https://1drv.ms/i/c/644d3864491f861f/IQCrfAq_ZAduSq1yZmVXzzNcAZeQNAwTFuAAlh2bJAaEM3k?e=fbCWRu)
+![Mobile view](https://1drv.ms/i/c/644d3864491f861f/IQB1Szv0zmNQQ7MARzZnEvinAVszZla4aHZ5rLCOmPQsF7s?e=aIPh3Z)
 ```
 
 ## Цаашид сайжруулж болох зүйлс (Possible future improvements)

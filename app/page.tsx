@@ -122,7 +122,7 @@ const activeTasks = totalTasks - completedTasks;
 const completionPercentage =
   totalTasks === 0 ? 0 : Math.round((completedTasks / totalTasks) * 100);
   return (
-    <main className="min-h-screen bg-slate-200 p-6">
+    <main className="min-h-screen bg-[#1e2138] p-6">
       <div className="mx-auto max-w-3xl">
         <Header title="Student Task Manager" subtitle="Manage your daily tasks and assignments." />
       <TaskForm
@@ -139,7 +139,7 @@ const completionPercentage =
   completionPercentage={completionPercentage}
 />
       <div className="mb-4">
-  <label htmlFor="search" className="text-slate-900">Search</label>
+  <label htmlFor="search" className="text-white">Search</label>
   <input
     id="search"
     type="text"
@@ -159,7 +159,7 @@ const completionPercentage =
 </div>
 <div className="mb-4 flex gap-4">
   <div>
-    <label htmlFor="statusFilter" className="text-slate-900">Status: </label>
+    <label htmlFor="statusFilter" className="text-white">Status: </label>
     <select
       id="statusFilter"
       value={statusFilter}
@@ -172,7 +172,7 @@ const completionPercentage =
     </select>
   </div>
   <div>
-    <label htmlFor="priorityFilter" className="text-slate-900">Priority: </label>
+    <label htmlFor="priorityFilter" className="text-white">Priority: </label>
     <select
       id="priorityFilter"
       value={priorityFilter}
@@ -196,7 +196,7 @@ const completionPercentage =
     Reset Filters
   </button>
 </div>
-<p className="mb-2 text-sm text-slate-600">{visibleTasks.length} task(s) match</p>
+<p className="mb-2 text-sm text-slate-200">{visibleTasks.length} task(s) match</p>
      <TaskList
   tasks={visibleTasks}
   onToggle={toggleTask}

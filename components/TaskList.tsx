@@ -11,10 +11,10 @@ type TaskListProps = {
 export function TaskList({ tasks, onToggle, onDelete, onEdit }: TaskListProps) {
   return (
     <section className="space-y-3">
-      <h2 className="text-lg font-semibold text-slate-900">Tasks</h2>
+      <h2 className="text-lg font-semibold text-white">Tasks</h2>
 
 {tasks.length === 0 && (
-  <p className="text-slate-500 text-sm bg-white rounded-lg p-4 shadow-sm">
+  <p className="text-slate-300 text-sm bg-[#2a2e4a] rounded-lg p-4 shadow-sm">
     No matching tasks. Try adjusting your search or filters.
   </p>
 )}
