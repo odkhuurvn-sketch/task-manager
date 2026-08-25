@@ -92,7 +92,7 @@ student-task-manager/
 
 ## Цаашид сайжруулж болох зүйлс (Possible future improvements)
 
-- Dark mode
+- Dark mode/white
 - Due date/created date-ээр эрэмбэлэх (sort)
 - Task-д категори/tag нэмэх
 - Task-уудыг JSON болгож экспорт/импорт хийх
