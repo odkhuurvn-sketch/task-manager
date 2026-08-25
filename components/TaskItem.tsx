@@ -1,4 +1,10 @@
 import type { Task } from "@/types/task";
+const priorityClasses: Record<"low" | "medium" | "high", string> = {
+  low: "bg-green-100 text-green-700",
+  medium: "bg-amber-100 text-amber-800",
+  high: "bg-red-100 text-red-800",
+};
+
 
 type TaskItemProps = {
   task: Task;
@@ -40,7 +46,9 @@ export function TaskItem({ task, onToggle, onDelete, onEdit }: TaskItemProps) {
         </div>
       </div>
       <div className="mt-2 flex gap-2 text-xs">
-        <span className="bg-amber-100 text-amber-800 px-2 py-1 rounded-full font-medium">{priority}</span>
+        <span className={`px-2 py-1 rounded-full font-medium ${priorityClasses[priority]}`}>
+  {priority}
+</span>
         <span className="text-slate-500">Due: {dueDate}</span>
       </div>
       <div className="mt-2 flex gap-2">
